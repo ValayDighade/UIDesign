@@ -60,12 +60,11 @@ class _EventDescriptionState extends State<EventDescription> {
             ),
           ];
         },
-        body: Stack(
-          children: <Widget>[
+        body: Container(
 
-            _widgetContainer(),
+          color: Colors.white,
 
-          ],
+          child:_widgetContainer(),
         ),
       ),
     );
@@ -78,16 +77,17 @@ class _EventDescriptionState extends State<EventDescription> {
 
 
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
         Container(
-          height: h / 1.8,
+          height: h / 1.65,
           width: w,
           decoration: new BoxDecoration(
             color: Colors.black,
-            borderRadius: new BorderRadius.only(
-              topLeft: const Radius.circular(20.0),
-              topRight: const Radius.circular(20.0),
-            ),
+//            borderRadius: new BorderRadius.only(
+//              topLeft: const Radius.circular(30.0),
+//              topRight: const Radius.circular(30.0),
+//            ),
           ),
           child: Column(
             children: <Widget>[
@@ -155,12 +155,7 @@ class _EventDescriptionState extends State<EventDescription> {
                         gradient: LinearGradient(
                             colors: [Colors.grey, Colors.grey[400]]),
                         borderRadius: BorderRadius.circular(5),
-                        boxShadow: <BoxShadow>[
-                          BoxShadow(
-                              color: Colors.green.withOpacity(0.6),
-                              offset: Offset(1.1, 1.1),
-                              blurRadius: 10.0),
-                        ],
+
                       ),
                       child: Center(
                         child: Text(
@@ -190,12 +185,8 @@ class _EventDescriptionState extends State<EventDescription> {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      /* Divider(
-                                color: Colors.white54,
-                                height: 0.6,
-                                thickness: 2,
-                              ),*/
 
                       Text(
                         widget.name,
@@ -235,10 +226,6 @@ class _EventDescriptionState extends State<EventDescription> {
             ],
           ),
         ),
-        SizedBox(
-          height: h / 30,
-        ),
-
         _getButton(),
 
       ],
