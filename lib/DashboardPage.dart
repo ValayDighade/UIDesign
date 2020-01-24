@@ -1,3 +1,4 @@
+import 'package:company_task/Material.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _DashboardPageState extends State<DashboardPage> {
         title: Center(child: Text("Dashboard")),
       ),
       body: Center(
-        child: Text("Dashboard Page"),
+        child: Text("Dashboard Page",style: getData().textStyle),
       ),
     );
   }
